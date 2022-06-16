@@ -1,0 +1,42 @@
+.web-browser-header-image {
+  z-index: 1;
+  position: absolute;
+  left: 35px;
+  top: 23%;
+}
+.main-page-services {
+  width: 85%;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 50px;
+  top: -65px;
+  h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 52px;
+    color: #f9fafb;
+  }
+  .little-texts {
+    margin-top: 12px;
+    span {
+      &:first-child {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        color: #f9fafb;
+        margin-right: 16px;
+      }
+      &:last-child {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: #bdc3c7;
+      }
+    }
+  }
+  .main-page-services-cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

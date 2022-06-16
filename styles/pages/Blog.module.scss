@@ -1,0 +1,120 @@
+main {
+  .blog-page {
+    background: #f3f5f8;
+    backdrop-filter: blur(58px);
+    .section-header {
+      padding: 80px 0;
+      .section-top {
+        h1 {
+          font-size: 80px;
+          font-weight: 700;
+          line-height: 100px;
+          color: #061237;
+          margin: 0;
+        }
+        .category {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          span {
+            font-size: 16px;
+            line-height: 24px;
+            color: #586268;
+            &:first-child {
+              margin-right: 7px;
+            }
+            &:last-child {
+              margin-left: 12px;
+            }
+          }
+          .line {
+            width: 60px;
+            height: 1.2px;
+            background-color: #586268;
+          }
+        }
+      }
+      .section-bottom {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        p {
+          width: 75%;
+          line-height: 32px;
+          font-size: 16px;
+          text-align: justify;
+        }
+      }
+    }
+    .cards {
+      background-image: url(../../public/images/MainPageBg.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: #061237;
+      padding: 80px 0;
+      .card-context {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        row-gap: 50px;
+      }
+    }
+  }
+}
+
+@include breakpoint(laptop) {
+  main {
+    .blog-page {
+      .cards {
+        .card-context {
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(tablet) {
+  main {
+    .blog-page {
+      .cards {
+        .card-context {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(phablet) {
+  main {
+    .blog-page {
+      .cards {
+        padding: 0;
+      }
+      .section-header {
+        padding: 0;
+        .section-top {
+          h1 {
+            @include fontSize(20px, 600, 32px);
+          }
+          .category {
+            span {
+              @include fontSize(14px, 400, 20px);
+            }
+          }
+        }
+        .section-bottom {
+          p {
+            width: 100%;
+            @include fontSize(12px, 400, 16px);
+          }
+        }
+      }
+    }
+  }
+}

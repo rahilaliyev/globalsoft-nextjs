@@ -1,0 +1,132 @@
+footer {
+  background: #000226;
+  padding: 40px 0 24px 0;
+  .footer-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding-bottom: 10px;
+    .logo {
+      width: 106px;
+      height: 106px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    nav {
+      width: 50%;
+      ul {
+        display: flex;
+        justify-content: space-between;
+        .active {
+          border-bottom: 1px solid #4c4be5;
+          padding-bottom: 15px;
+          color: #f9fafb;
+          transition: 0.5s;
+        }
+        .inactive {
+          color: #bdc3c7;
+          transition: 0.5s;
+        }
+        a:hover {
+          color: #f9fafb;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+  .line {
+    width: 100%;
+    height: 1px;
+    background: #08205d;
+  }
+  .footer-info {
+    color: #bdc3c7;
+    padding: 45px 0;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    .card {
+      h4 {
+        font-size: 20px;
+        font-weight: 500;
+        margin: 0;
+        line-height: 28px;
+        color: #f9fafb;
+        text-transform: uppercase;
+        font-family: $Poppins;
+      }
+      .card-image {
+        width: 28px;
+        height: 32px;
+        display: inline-flex;
+        margin-bottom: 12px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    .copyright {
+      color: #f9fafb;
+      font-size: 14px;
+    }
+    .social-networks {
+      a {
+        margin-left: 36px;
+      }
+    }
+  }
+}
+
+@include breakpoint(tablet) {
+  footer {
+    padding: 0;
+    .footer-navbar {
+      flex-direction: column;
+      .logo {
+        width: 70px;
+        height: 70px;
+      }
+      nav {
+        display: none;
+      }
+    }
+    .footer-info,
+    .footer-bottom {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0;
+      .card {
+        width: 100%;
+        .card-image {
+          width: 18px;
+          height: 18px;
+          margin-bottom: 0;
+        }
+        h4 {
+          @include fontSize(18px, 400, 32px);
+        }
+      }
+      p {
+        text-align: center;
+        @include fontSize(12px, 400, 16px);
+      }
+      .social-networks {
+        a:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@import "./abstracts/variables.scss";
+@import "./abstracts/mixins.scss";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: $Poppins;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $Montserrat;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  outline: none;
+  font-family: $Poppins;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+select {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+::placeholder {
+  font-family: $Poppins;
+}
+
+@include breakpoint(laptop) {
+  .container {
+    width: 100%;
+    padding: 12px 20px !important;
+  }
+}
+
+

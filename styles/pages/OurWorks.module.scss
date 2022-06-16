@@ -1,0 +1,88 @@
+main {
+    .our-work-page {
+      padding: 80px 0;
+      background: #f3f5f8;
+      backdrop-filter: blur(58px);
+      .our-works-context {
+        .section-top {
+          h1 {
+            font-size: 80px;
+            font-weight: 700;
+            line-height: 100px;
+            color: #061237;
+            margin: 0;
+          }
+          .category {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            span {
+              font-size: 16px;
+              line-height: 24px;
+              color: #586268;
+              &:first-child {
+                margin-right: 7px;
+              }
+              &:last-child {
+                margin-left: 12px;
+              }
+            }
+            .line {
+              width: 60px;
+              height: 1.2px;
+              background-color: #586268;
+            }
+          }
+        }
+        .section-bottom {
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+          p {
+            width: 75%;
+            line-height: 32px;
+            font-size: 16px;
+            text-align: justify;
+          }
+        }
+      }
+    }
+    .our-work-page-data {
+      background-image: url(../../public/images/MainPageBg.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: #061237;
+      padding: 80px 0;
+      .our-work-page-data-context {
+        .tabs {
+          margin-bottom: 24px;
+          ul {
+            display: flex;
+            li {
+              &:not(:last-child) {
+                margin-right: 16px;
+              }
+              button {
+                padding: 12px;
+                border: 1px solid #3121e8;
+                border-radius: 4px;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+                color: #f9fafb;
+              }
+              .active {
+                background: #3121e8;
+              }
+            }
+          }
+        }
+        .cards {
+          margin-top: 44px;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    }
+  }
+  

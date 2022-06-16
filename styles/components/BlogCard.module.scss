@@ -1,0 +1,49 @@
+.card {
+  width: 336px;
+  position: relative;
+  .card-header {
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+      color: #f9fafb;
+    }
+  }
+  .card-image {
+    width: 100%;
+    height: 336px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .card-date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-90deg);
+    position: absolute;
+    width: 336px;
+    left: -55%;
+    top: 57%;
+    span {
+      width: 60%;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 500;
+      color: #959fa5;
+    }
+    .line {
+      height: 2px;
+      width: 100%;
+      background-color: #959fa5;
+    }
+  }
+}
+
+@include breakpoint(laptop) {
+  .card {
+    margin-left: 20px;
+  }
+}

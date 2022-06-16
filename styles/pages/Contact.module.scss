@@ -1,0 +1,255 @@
+main {
+  .contact {
+    background: #f3f5f8;
+    backdrop-filter: blur(58px);
+    background-image: url(../../public/images/contactBg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    .contact-context {
+      padding: 80px 0;
+      .section-top {
+        h1 {
+          font-size: 80px;
+          font-weight: 700;
+          line-height: 100px;
+          color: #061237;
+          margin: 0;
+        }
+        .category {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          span {
+            font-size: 16px;
+            line-height: 24px;
+            color: #586268;
+            &:first-child {
+              margin-right: 7px;
+            }
+            &:last-child {
+              margin-left: 12px;
+            }
+          }
+          .line {
+            width: 60px;
+            height: 1.2px;
+            background-color: #586268;
+          }
+        }
+      }
+      .section-bottom {
+        margin-top: 60px;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        h3 {
+          font-size: 32px;
+          font-weight: 500;
+          line-height: 40px;
+          color: #2e3131;
+          margin: 0;
+          margin-bottom: 4px;
+        }
+        p {
+          margin: 0;
+          line-height: 24px;
+          font-size: 14px;
+          font-weight: 500;
+          color: #586268;
+          margin-bottom: 4px;
+        }
+        .info {
+          position: absolute;
+          left: 2%;
+          top: 15%;
+          background: #3121e8;
+          border-radius: 6px;
+          padding: 40px;
+          width: 30%;
+          h3 {
+            color: #f9fafb;
+          }
+          p {
+            font-weight: 400;
+            color: #e4e8ee;
+            margin-bottom: 48px;
+          }
+          ul {
+            li {
+              display: flex;
+              align-items: center;
+              margin-bottom: 24px;
+              .icon {
+                margin-right: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 24px;
+                height: 32px;
+              }
+              span {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 28px;
+                color: #f3f5f8;
+              }
+            }
+          }
+          .social-networks {
+            display: flex;
+            margin-top: 60px;
+            width: 60%;
+            justify-content: space-between;
+            align-items: center;
+          }
+        }
+        form {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          padding: 36px 92px;
+          background: linear-gradient(130.54deg, #f9fafb 15.8%, rgba(249, 250, 251, 0.87) 92.06%);
+          width: 90%;
+          box-shadow: 0px 20px 100px rgba(0, 0, 0, 0.15);
+          border-radius: 6px;
+          .form-context {
+            width: 75%;
+
+            .form-input {
+              display: flex;
+              flex-direction: column;
+              margin-bottom: 16px;
+              &:last-child {
+                margin-bottom: 28px;
+              }
+              label {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                text-align: justify;
+                color: #343a40;
+              }
+              input,
+              textarea {
+                background: #f3f5f8;
+                margin-top: 8px;
+                border: 1px solid #ffffff;
+                box-sizing: border-box;
+                border-radius: 6px;
+                outline: none;
+                padding: 12px 20px;
+                resize: none;
+                height: 48px;
+              }
+              textarea {
+                height: 140px;
+              }
+              ::placeholder {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 24px;
+                text-align: justify;
+                color: #acb3b8;
+              }
+            }
+            button {
+              width: 100%;
+              padding: 16px 0;
+              text-align: center;
+              background: #3121e8;
+              border-radius: 6px;
+              font-weight: 500;
+              font-size: 20px;
+              line-height: 24px;
+              color: #f9fafb;
+              .play-icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(phablet) {
+  main {
+    .contact {
+      .contact-context {
+        .section-top {
+          h1 {
+            @include fontSize(20px, 600, 32px);
+          }
+          .category {
+            span {
+              @include fontSize(14px, 400, 20px);
+            }
+          }
+        }
+        .section-bottom {
+          flex-direction: column-reverse;
+          margin-top: 20px;
+          form {
+            width: 100%;
+            padding: 20px;
+            .form-context {
+              width: 100%;
+              h3 {
+                @include fontSize(20px, 500, 32px);
+              }
+              p {
+                margin-bottom: 20px;
+              }
+              .form-input {
+                label {
+                  @include fontSize(12px, 400, 16px);
+                }
+                ::placeholder {
+                  @include fontSize(12px, 400, 16px);
+                }
+              }
+              button {
+                @include fontSize(16px, 400, 20px);
+                padding: 12px 0;
+              }
+            }
+          }
+          .info {
+            position: static;
+            width: 100%;
+            padding: 24px;
+            h3 {
+              @include fontSize(20px, 500, 32px);
+            }
+            p {
+              margin-bottom: 0;
+            }
+            ul {
+              li {
+                &:first-child {
+                  margin-top: 24px;
+                }
+                justify-content: space-between;
+                span {
+                  @include fontSize(12px, 400, 16px);
+                }
+              }
+            }
+            .social-networks {
+              margin-top: 0;
+              width: 100%;
+            }
+          }
+          p {
+            width: 100%;
+            @include fontSize(12px, 400, 16px);
+          }
+        }
+      }
+    }
+  }
+}

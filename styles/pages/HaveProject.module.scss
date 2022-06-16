@@ -1,0 +1,123 @@
+main {
+  .haveProject {
+    background: #f3f5f8;
+    backdrop-filter: blur(58px);
+    background-image: url(../../public/images/haveProjectBg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 10%;
+    .haveProject-context {
+      display: flex;
+      justify-content: center;
+      padding: 80px 0;
+      form {
+        width: 80%;
+        background: linear-gradient(130.54deg, #f9fafb 15.8%, rgba(249, 250, 251, 0.87) 92.06%);
+        box-shadow: 0px 20px 100px rgba(0, 0, 0, 0.15);
+        border-radius: 6px;
+        padding: 48px 138px;
+        h1 {
+          font-weight: 600;
+          font-size: 60px;
+          line-height: 80px;
+          color: #061237;
+          margin: 0;
+        }
+        .spans {
+          margin-bottom: 32px;
+          span:first-child {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            color: #3121e8;
+          }
+          span:last-child {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            color: #959fa5;
+            margin-left: 16px;
+          }
+        }
+        .form-input {
+          display: flex;
+          flex-direction: column;
+          select,
+          input,
+          textarea {
+            outline: none;
+            background: #f3f5f8;
+            border: 1px solid #ffffff;
+            box-sizing: border-box;
+            border-radius: 6px;
+            resize: none;
+            height: 48px;
+            padding: 12px 20px;
+            margin-bottom: 16px;
+          }
+          textarea {
+            height: 140px;
+            margin-bottom: 28px;
+          }
+          ::placeholder {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            text-align: justify;
+            color: #acb3b8;
+          }
+        }
+        button {
+          width: 100%;
+          padding: 16px 0;
+          text-align: center;
+          background: #3121e8;
+          border-radius: 6px;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 24px;
+          color: #f9fafb;
+          .play-icon {
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(phablet) {
+  main {
+    .haveProject {
+      .haveProject-context {
+        form {
+          padding: 24px 12px;
+          width: 100%;
+          h1 {
+            @include fontSize(20px, 600, 32px);
+          }
+          .spans {
+            span:first-child {
+              @include fontSize(14px, 700, 20px);
+            }
+            span:last-child {
+              @include fontSize(12px, 400, 16px);
+            }
+          }
+          .form-input {
+            label {
+              @include fontSize(12px, 400, 16px);
+            }
+            ::placeholder {
+              @include fontSize(12px, 400, 16px);
+            }
+          }
+          button {
+            @include fontSize(16px, 400, 20px);
+            padding: 12px 0;
+          }
+        }
+      }
+    }
+  }
+}

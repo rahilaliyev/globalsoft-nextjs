@@ -1,0 +1,191 @@
+header {
+  background: #061237;
+  color: white;
+  .header-context {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    .logo {
+      width: 75px;
+      height: 75px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      ul {
+        display: flex;
+        justify-content: space-around;
+        li {
+          margin-left: 48px;
+          .active {
+            border-bottom: 1px solid #4c4be5;
+            padding-bottom: 15px;
+            color: #f9fafb;
+            transition: 0.5s;
+          }
+          .inactive {
+            color: #bdc3c7;
+            transition: 0.5s;
+          }
+          a:hover {
+            color: #f9fafb;
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+    .header-right-side,
+    .header-right-active {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      button {
+        color: #f9fafb;
+        padding: 16px 24px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        border: 1px solid #1c64eb;
+        border-radius: 8px;
+        transition: 0.5s;
+        .play-icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-left: 12px;
+          img {
+            margin-left: 12px;
+          }
+        }
+        &:hover {
+          background-color: #3121e8;
+        }
+      }
+      .languages {
+        margin-left: 32px;
+        select {
+          color: white;
+        }
+      }
+    }
+    .hamburger {
+      display: none;
+      .btn5 {
+        width: 30px;
+        height: 30px;
+        transition-duration: 0.5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .icon {
+          transition-duration: 0.5s;
+          position: relative;
+          height: 4px;
+          width: 30px;
+          background-color: white;
+          &:before {
+            transition-duration: 0.5s;
+            position: absolute;
+            width: 30px;
+            height: 4px;
+            background-color: white;
+            content: "";
+            top: -10px;
+          }
+
+          &:after {
+            transition-duration: 0.5s;
+            position: absolute;
+            width: 30px;
+            height: 4px;
+            background-color: white;
+            content: "";
+            top: 10px;
+          }
+        }
+
+        &.open {
+          .icon {
+            transition: 0.5s;
+
+            &:before {
+              transform: rotateZ(-45deg) scaleX(0.75) translate(-12px, -5px);
+            }
+
+            &:after {
+              transform: rotateZ(45deg) scaleX(0.75) translate(-12px, 5px);
+            }
+          }
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(laptop) {
+  header {
+    .header-context {
+      justify-content: center;
+      .hamburger {
+        display: block;
+        z-index: 2;
+        position: absolute;
+        left: 20px;
+      }
+      nav {
+        position: absolute;
+        top: 0;
+        background-color: #061237;
+        left: -250px;
+        transition: 1s;
+        height: 80vh;
+        width: 250px;
+        z-index: 1;
+        ul {
+          flex-direction: column;
+          margin-top: 20px;
+          li {
+            margin-bottom: 20px;
+          }
+        }
+      }
+      .nav-active {
+        left: 0;
+      }
+      .header-right-side,
+      .header-right-active {
+        transition: 1s;
+        position: absolute;
+        top: 55%;
+        flex-direction: column-reverse;
+        width: 250px;
+        align-items: flex-start;
+        margin-left: 48px;
+        z-index: 1;
+        .languages {
+          margin-left: 0;
+          margin-bottom: 20px;
+        }
+      }
+      .header-right-side {
+        left: -250px;
+      }
+      .header-right-active {
+        left: 0;
+      }
+    }
+  }
+}
