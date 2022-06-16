@@ -165,7 +165,7 @@ export default function Home({ posts, works, employeer, blog, comment }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetch("http://localhost:3000/api/servicesApi/");
   const posts = await res.json();
 

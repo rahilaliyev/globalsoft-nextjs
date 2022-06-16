@@ -54,7 +54,7 @@ const OurWorkPage = ({ works }) => {
   );
 };
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const workRes = await fetch("http://localhost:3000/api/workApi/");
   const works = await workRes.json();
   return {
