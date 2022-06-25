@@ -1,12 +1,14 @@
 @import "./abstracts/variables.scss";
 @import "./abstracts/mixins.scss";
 
+
 @import "./components/Header.module.scss";
 @import "./components/Footer.module.scss";
 @import "./components/BlogCard.module.scss";
 @import "./components/ServiceCard.module.scss";
 @import "./components/WebBrowserSticky.module.scss";
 @import "./components/OurWorkCard.module.scss";
+
 
 @import "./pages/Home.module.scss";
 @import "./pages/About.module.scss";
