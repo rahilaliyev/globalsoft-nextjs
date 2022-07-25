@@ -108,7 +108,7 @@ const ServicesPage = ({ posts }) => {
 export default ServicesPage;
 
 export async function getServerSideProps() {
-  const res = await fetch("http://localhost:3000/api/servicesApi/");
+  const res = await fetch("https://globalsoft.vercel.app/api/servicesApi/");
   const posts = await res.json();
 
   return {
