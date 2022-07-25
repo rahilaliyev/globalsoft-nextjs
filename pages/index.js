@@ -166,19 +166,19 @@ export default function Home({ posts, works, employeer, blog, comment }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch("http://localhost:3000/api/servicesApi/");
+  const res = await fetch("https://globalsoft.vercel.app/api/servicesApi/");
   const posts = await res.json();
 
-  const workRes = await fetch("http://localhost:3000/api/workApi/");
+  const workRes = await fetch("https://globalsoft.vercel.app/api/workApi/");
   const works = await workRes.json();
 
-  const employeerRes = await fetch("http://localhost:3000/api/personApi/");
+  const employeerRes = await fetch("https://globalsoft.vercel.app/api/personApi/");
   const employeer = await employeerRes.json();
 
-  const blogRes = await fetch("http://localhost:3000/api/blogApi/");
+  const blogRes = await fetch("https://globalsoft.vercel.app/api/blogApi/");
   const blog = await blogRes.json();
 
-  const commentRes = await fetch("http://localhost:3000/api/commentApi/");
+  const commentRes = await fetch("https://globalsoft.vercel.app/api/commentApi/");
   const comment = await commentRes.json();
   return {
     props: {

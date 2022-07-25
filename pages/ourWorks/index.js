@@ -55,7 +55,7 @@ const OurWorkPage = ({ works }) => {
 };
 
 export async function getServerSideProps() {
-  const workRes = await fetch("http://localhost:3000/api/workApi/");
+  const workRes = await fetch("https://globalsoft.vercel.app/api/workApi/");
   const works = await workRes.json();
   return {
     props: {

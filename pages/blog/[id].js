@@ -44,10 +44,10 @@ const BlogDetails = ({ data, blogs }) => {
 export default BlogDetails;
 
 export const getServerSideProps = async (context) => {
-  const res = await fetch(`http://localhost:3000/api/blogApi/${context.params.id}`);
+  const res = await fetch(`https://globalsoft.vercel.app/api/blogApi/${context.params.id}`);
   const data = await res.json();
 
-  const resBlog = await fetch("http://localhost:3000/api/blogApi/");
+  const resBlog = await fetch("https://globalsoft.vercel.app/api/blogApi/");
   const blogs = await resBlog.json();
 
   return {

@@ -111,10 +111,10 @@ const OurWorkPageDetails = ({ works }) => {
 };
 
 export const getServerSideProps = async (context) => {
-  const res = await fetch(`http://localhost:3000/api/workApi/${context.params.id}`);
+  const res = await fetch(`https://globalsoft.vercel.app/api/workApi/${context.params.id}`);
   const data = await res.json();
 
-  const resWorks = await fetch("http://localhost:3000/api/workApi/");
+  const resWorks = await fetch("https://globalsoft.vercel.app/api/workApi/");
   const works = await resWorks.json();
 
   return {

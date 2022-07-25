@@ -69,7 +69,7 @@ const ServiceDetails = ({ data }) => {
 };
 
 export const getServerSideProps = async (context) => {
-  const res = await fetch(`http://localhost:3000/api/servicesApi/${context.params.id}`);
+  const res = await fetch(`https://globalsoft.vercel.app/api/servicesApi/${context.params.id}`);
   const data = await res.json();
 
   return {
